@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "259167720158",
+    "firebase_url": "https://findyou-9053b-default-rtdb.firebaseio.com",
+    "project_id": "findyou-9053b",
+    "storage_bucket": "findyou-9053b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259167720158:android:72563ed3005a06eaeca84f",
+        "android_client_info": {
+          "package_name": "com.e.o.find_you"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIgv1VVb25KYEvYU9-S7WLbHwX_U5bPss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259167720158:android:d35278d76efc8832eca84f",
+        "android_client_info": {
+          "package_name": "com.findyou_professionalapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIgv1VVb25KYEvYU9-S7WLbHwX_U5bPss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/DashBoardFragment">
+
+    <fragment
+        android:id="@+id/DashBoardFragment"
+        android:name="com.findyou_professionalapp.fragments.DashBoardFragment"
+        tools:layout="@layout/fragment_dash_board" />
+
+    <fragment
+        android:id="@+id/ChatFragment"
+        android:name="com.findyou_professionalapp.fragments.ChatFragment"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/ProfileFragment"
+        android:name="com.findyou_professionalapp.fragments.ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

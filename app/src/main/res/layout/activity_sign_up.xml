@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activities.Sign_up">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/top_view"
+                    android:layout_width="628dp"
+                    android:layout_height="307dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="-10dp"
+                    android:layout_marginTop="-110dp"
+                    android:layout_marginEnd="-200dp"
+                    android:backgroundTint="@color/primary"
+                    android:background="@drawable/top_bennor" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:layout_marginTop="-180dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_18px"
+                    android:text="Sign up"
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_image"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_header">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/img_profile"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        android:layout_gravity="center"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/account_ic"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/CircularView" />
+
+                    <ImageButton
+                        android:id="@+id/bnt_Update_pic"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="75dp"
+                        android:layout_marginTop="70dp"
+                        android:backgroundTint="@color/primary"
+                        android:background="@drawable/add_circle"
+                        app:layout_constraintEnd_toEndOf="@id/img_profile"
+                        app:layout_constraintStart_toStartOf="@id/img_profile"
+                        app:layout_constraintTop_toTopOf="@id/img_profile" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tv_userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    app:boxCornerRadiusTopEnd="5dp"
+                    app:boxCornerRadiusTopStart="5dp"
+                    app:boxCornerRadiusBottomEnd="5dp"
+                    app:boxCornerRadiusBottomStart="5dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Full Name"
+                    android:paddingStart="5dp"
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/black_lite">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_userName"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:inputType="text"
+                        android:maxLength="35"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tv_Phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    app:boxCornerRadiusTopEnd="5dp"
+                    app:boxCornerRadiusTopStart="5dp"
+                    app:boxCornerRadiusBottomEnd="5dp"
+                    app:boxCornerRadiusBottomStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Phone number"
+                    android:paddingStart="5dp"
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/black_lite">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_Phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:inputType="number"
+                        android:maxLength="12"
+                        android:textColor="@color/black"
+                        android:digits="1234567890"
+                        android:textStyle="normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tv_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    app:boxCornerRadiusTopEnd="5dp"
+                    app:boxCornerRadiusTopStart="5dp"
+                    app:boxCornerRadiusBottomEnd="5dp"
+                    app:boxCornerRadiusBottomStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Email"
+                    android:paddingStart="5dp"
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/black_lite">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:maxLength="35"
+                        android:textStyle="normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="match_parent"
+                        android:padding="5dp"
+                        android:background="@drawable/layout_bg"
+                        android:layout_height="45dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Gender"
+                            android:paddingStart="10dp"
+                            android:layout_weight="1"
+                            android:textSize="13sp"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/RB_F"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/primary"
+                            android:layout_height="35dp"
+                            android:text="Female"
+                            android:textSize="13sp"/>
+
+                        <RadioButton
+                            android:id="@+id/RB_M"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/primary"
+                            android:layout_height="35dp"
+                            android:text="Male"
+                            android:textSize="13sp"/>
+
+                    </RadioGroup>
+                    
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tv_DOB"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    app:boxCornerRadiusTopEnd="5dp"
+                    app:boxCornerRadiusTopStart="5dp"
+                    app:boxCornerRadiusBottomEnd="5dp"
+                    app:boxCornerRadiusBottomStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="DOB (DD/MM/YYYY)"
+                    android:paddingStart="5dp"
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/black_lite">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_DOB"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:drawableEnd="@drawable/calender_icon"
+                        android:inputType="number"
+                        android:digits="0123456789/"
+                        android:longClickable="false"
+                        android:drawableTint="@color/primary"
+                        android:maxLength="15"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tv_profession"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    app:boxCornerRadiusTopEnd="5dp"
+                    app:boxCornerRadiusTopStart="5dp"
+                    app:boxCornerRadiusBottomEnd="5dp"
+                    app:boxCornerRadiusBottomStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Profession(ex:electrician)"
+                    android:paddingStart="5dp"
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/black_lite">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_profession"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:inputType="text"
+                        android:maxLength="42"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tv_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    app:boxCornerRadiusTopEnd="5dp"
+                    app:boxCornerRadiusTopStart="5dp"
+                    app:boxCornerRadiusBottomEnd="5dp"
+                    app:boxCornerRadiusBottomStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Password"
+                    android:paddingStart="5dp"
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/black_lite">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:drawableEnd="@drawable/eye_off"
+                        android:inputType="textPassword"
+                        android:longClickable="false"
+                        android:drawableTint="@color/primary"
+                        android:maxLength="15"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tv_confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    app:boxCornerRadiusTopEnd="5dp"
+                    app:boxCornerRadiusTopStart="5dp"
+                    app:boxCornerRadiusBottomEnd="5dp"
+                    app:boxCornerRadiusBottomStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Confirm Password"
+                    android:paddingStart="5dp"
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/black_lite">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_confirm_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:textSize="13sp"
+                        android:padding="10dp"                        android:drawableEnd="@drawable/eye_off"
+                        android:inputType="textPassword"
+                        android:longClickable="false"
+                        android:maxLength="15"
+                        android:drawableTint="@color/primary"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-35dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/gry" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="or"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold|normal" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/gry" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="Sign up With"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_singup_mail"
+                    android:layout_width="85dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/button_bgm"
+                    android:gravity="center"
+                    android:backgroundTint="@color/primary"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/gmail_icon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_singup_fb"
+                    android:layout_width="85dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/button_bgm"
+                    android:gravity="center"
+                    android:backgroundTint="@color/primary"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/fb_ic" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Already have an account?"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+                <LinearLayout
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_login"
+                        android:layout_width="48dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="login"
+                        android:textColor="@color/primary"
+                        android:textSize="13sp"
+                        android:textStyle="bold|normal" />
+
+                    <View
+                        android:layout_width="45dp"
+                        android:layout_height="3dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="3dp"
+                        android:background="@color/primary" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_signUp"
+                android:layout_width="95dp"
+                android:layout_height="45dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/button_bgm"
+                android:gravity="center"
+                android:backgroundTint="@color/primary"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign up"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold|normal" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+{"Services":{
+  "1": {
+    "name": "Home Services",
+    "types": {
+      "Plumbing": ["Leak Repairs", "Pipe Installation", "Drain Cleaning"],
+      "Electrical": ["Wiring and Installation", "Appliance Repair", "Lighting Setup"],
+      "Carpentry": ["Furniture Making", "Cabinet Repairs", "Custom Woodwork"],
+      "CleaningServices": ["Residential Cleaning", "Office Cleaning", "Deep Cleaning"],
+      "PestControl": ["Termite Control", "Rodent Control", "Insect Treatment"]
+    },
+    "description": "At Find You, we connect you with trusted, certified electricians who provide reliable services right at your doorstep. Whether it's installing new lighting, repairing electrical systems, or performing safety checks, our electricians are skilled professionals dedicated to ensuring quality and safety in every job. With Find You, finding the right electrician has never been easier—simply connect with the best service providers in your area for quick and efficient solutions tailored to your needs."
+  },
+  "2": {
+    "name": "Repair Maintenance",
+    "types": {
+      "ApplianceRepair": ["Washing Machines", "Refrigerators", "Air Conditioning Repair"],
+      "HVACServices": ["Installation", "Repair and Maintenance"],
+      "HandymanServices": ["General Repairs", "Furniture Assembly", "Door Repairs"]
+    },
+    "description": "At Find You, we connect you with experienced car mechanics who can perform a range of services from oil changes to full engine repairs. Whether you need routine maintenance or urgent repairs, our mechanics are equipped with the tools and knowledge to get your vehicle back on the road quickly. Trust Find You for reliable, convenient car repair services at your location."
+  },
+  "3": {
+    "name": "Automotive Services",
+    "types": {
+      "CarRepair": ["Engine Diagnostics", "Brake Services", "Oil Change"],
+      "TireServices": ["Installation", "Rotation and Balancing"],
+      "CarDetailing": ["Interior Cleaning", "Exterior Polishing"]
+    },
+    "description": "At Find You, our certified plumbers are ready to tackle any plumbing issue you might face, from leaking pipes to full system installations. Whether it's a blocked drain, a burst pipe, or setting up new water systems, our professionals ensure top-notch service. With Find You, get quick, affordable, and high-quality plumbing solutions delivered right to your door."
+  },
+  "4": {
+    "name": "Beauty Wellness",
+    "types": {
+      "HairStyling": ["Haircuts", "Hair Coloring"],
+      "MassageTherapy": ["Relaxation Massage", "Therapeutic Massage"],
+      "NailServices": ["Manicures", "Pedicures"],
+      "PersonalFitnessTrainers": ["Yoga Instructors", "Strength Training"]
+    },
+    "description": "At Find You, our expert painters provide both interior and exterior painting services with a focus on precision and quality. Whether you're refreshing a room, adding a new color to your home, or tackling a commercial project, our painters ensure a flawless finish. With Find You, get in touch with professional painters who bring your vision to life with attention to detail and care."
+  },
+  "5": {
+    "name": "Technology IT Services",
+    "types": {
+      "WebDevelopment": ["Website Design", "E-commerce Setup"],
+      "TechSupport": ["Computer Repair", "Software Installation"],
+      "MobileAppDevelopment": ["iOS and Android Apps", "App Maintenance"],
+      "Networking": ["Wi-Fi Setup", "Server Maintenance"]
+    },
+    "description": "Find You connects you with skilled carpenters who are experienced in everything from furniture building to custom cabinetry and home improvements. Whether you need a new shelf, a custom-built wardrobe, or structural repairs, our carpenters offer quality craftsmanship with every job. Trust Find You to help you bring your woodworking ideas to life."
+  },
+  "6": {
+    "name": "Business Professional Services",
+    "types": {
+      "AccountingBookkeeping": ["Tax Filing", "Financial Planning"],
+      "LegalServices": ["Document Preparation", "Consultation"],
+      "DigitalMarketing": ["SEO Services", "Social Media Management"],
+      "GraphicDesign": ["Logo Creation", "Branding Packages"]
+    },
+    "description": "At Find You, we connect you with professional gardeners who can help maintain your lawn, garden, and outdoor spaces. Whether you need garden design, landscaping, or routine lawn care, our gardeners are committed to providing personalized solutions that meet your needs. Let Find You connect you with local experts who keep your green spaces beautiful and healthy year-round."
+  },
+  "7": {
+    "name": "Education Tutoring",
+    "types": {
+      "PrivateTutors": ["Math Tutors", "Science Tutors"],
+      "MusicTeachers": ["Piano Lessons", "Guitar Lessons"],
+      "LanguageLearning": ["English as a Second Language", "Spanish Lessons"]
+    },
+    "description": "An HVAC technician installs, maintains, and repairs heating, ventilation, and air conditioning systems."
+  },
+  "8": {
+    "name": "Event Services",
+    "types": {
+      "Catering": ["Wedding Catering", "Corporate Events"],
+      "Photography": ["Event Photography", "Portrait Photography"],
+      "PartyPlanning": ["Weddings", "Birthdays"],
+      "DJServices": ["Music for Events", "Sound Setup"]
+    },
+    "description": "A mason builds structures from bricks, stones, concrete blocks, and other materials, such as walls, floors, and chimneys."
+  }
+}
+}

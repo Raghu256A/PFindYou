@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="2dp"
+    tools:context=".activities.ChatViewActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_lite"
+        android:gravity="start|center"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:id="@+id/topHeader"
+        android:padding="@dimen/_5sdp">
+
+        <View
+            android:id="@+id/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/backword_ic"
+            android:backgroundTint="@color/white" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="50dp"
+            android:id="@+id/sim_contact_dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start|center"
+            android:src="@drawable/profile"
+            android:scaleType="fitXY"
+            app:shapeAppearanceOverlay="@style/CircularView" />
+
+        <TextView
+            android:id="@+id/tv_contactName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:padding="5dp"
+            android:text="Raghu "
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:id="@+id/Call"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/phone"
+            android:backgroundTint="@color/white" />
+
+        <View
+            android:id="@+id/opt_menu"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/more_vertical"
+            android:backgroundTint="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ll_Chat"
+        android:layout_below="@+id/topHeader"
+        android:layout_above="@+id/ll_chat"
+        android:orientation="horizontal">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_Chat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/sent_msg" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/ll_chat"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/edittext_bg"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <EditText
+                android:id="@+id/et_enter_msg"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:gravity="center|left"
+                android:hint="Message"
+                android:inputType="textMultiLine"
+                android:padding="5dp"
+                android:paddingStart="3dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold|italic" />
+            <View
+                android:id="@+id/att"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/attachment"
+                android:backgroundTint="@color/gray" />
+            <View
+                android:id="@+id/camera"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/camera"
+                android:backgroundTint="@color/gray" />
+
+            <View
+                android:id="@+id/mic"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/mic_on"
+                android:backgroundTint="@color/gray" />
+        </LinearLayout>
+        <Button
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            app:cornerRadius="30dp"
+            android:id="@+id/sent_btn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:drawableTop="@drawable/send_ic"
+            android:text=""/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

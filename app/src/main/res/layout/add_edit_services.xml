@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/wave_line_bg"
+    android:layout_width="match_parent"
+    android:backgroundTint="@color/secondry_lite"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <View
+            android:id="@+id/wv_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/backword_ic" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:text="Add Service"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center|start"
+                    android:text="Service Name"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/black_lite"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+                <EditText
+                    android:id="@+id/et_serviceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="8dp"
+                    android:layout_marginTop="5dp"
+                    android:inputType="text"
+                    android:gravity="center|start"
+                    android:hint="Enter service(ex:Electrical)"
+                    android:background="@drawable/edit_text_bg"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center|start"
+                    android:text="Add Sub Services"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/black_lite"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/ll_sub_service"
+                    android:orientation="vertical"
+                    android:background="@drawable/edit_text_bg"
+                    android:padding="5dp">
+
+                    <EditText
+                        android:id="@+id/et_sub_service1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"                            android:paddingStart="6dp"
+                        android:paddingEnd="2dp"
+                        android:layout_marginTop="5dp"
+                        android:inputType="textMultiLine"
+                        android:gravity="center|start"
+                        android:hint="Sub service(ex:wiring)"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+                    <EditText
+                        android:id="@+id/et_sub_service2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="2dp"
+                        android:layout_marginTop="1dp"
+                        android:gravity="center|start"
+                        android:hint="Sub service(ex:Electrical Repairing)"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+                    <EditText
+                        android:id="@+id/et_sub_service3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="2dp"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:layout_marginTop="1dp"
+                        android:gravity="center|start"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:hint="Sub service(ex:lighting setup)"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center|start"
+                    android:text="Total Experience"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/black_lite"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+                <EditText
+                    android:id="@+id/et_bankName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:layout_marginTop="5dp"
+                    android:inputType="text"
+                    android:gravity="center|start"
+                    android:hint="experience(ex: 2 years 5 months)"
+                    android:background="@drawable/edit_text_bg"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center|start"
+                    android:text="Add Description"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/black_lite"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+                <EditText
+                    android:id="@+id/et_IFSCCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:padding="11dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="top|start"
+                    android:hint="add description"
+                    android:inputType="textMultiLine"
+                    android:background="@drawable/edit_text_bg"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/primary"
+                    android:background="@drawable/edit_text_bg"
+                    android:gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:textAllCaps="false"
+                    android:textStyle="normal|bold"
+                    android:textColor="@color/white"
+                    android:text="Submit"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</LinearLayout>

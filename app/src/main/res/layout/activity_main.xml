@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="-350px"
+            android:layout_marginTop="-205dp"
+            android:layout_marginBottom="-100dp"
+            android:background="@color/primary"
+            android:orientation="vertical" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="-135dp"
+            android:layout_marginEnd="-450dp"
+            android:layout_marginBottom="-130dp"
+            android:background="@color/secondry"
+            android:orientation="vertical" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/Rl_main2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#FFFFFF"
+        android:clipToOutline="true">
+
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="525dp"
+            android:layout_height="1385dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="-256dp"
+            android:layout_marginTop="-160dp"
+            android:layout_marginEnd="-550dp"
+            android:layout_marginBottom="-400dp"
+            android:background="@color/primary"
+            android:rotation="29.17" />
+        <View
+            android:id="@+id/view4"
+            android:layout_width="525dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="132.78dp"
+            android:layout_marginEnd="-114.97dp"
+            android:layout_marginBottom="-314.97dp"
+            android:background="@color/secondry"
+            android:rotation="30.17" />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ll_main3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="visible"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:scaleType="fitXY"
+            android:padding="10dp"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/app_ic"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:text="v0.001"
+            android:textColor="@color/primary"
+            />
+
+    </LinearLayout>
+    <View
+        android:id="@+id/view5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="-0.5"
+        android:visibility="gone"
+        android:layout_marginTop="-190dp"
+        android:layout_marginStart="-15dp"
+        android:layout_marginEnd="-15dp"
+        android:theme="@style/CircularView"
+        android:layout_marginBottom="-150dp"
+        android:background="@drawable/startcircle"/>
+
+
+</LinearLayout>

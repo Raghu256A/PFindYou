@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@color/primary"
+    android:backgroundTint="@color/primary"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="5dp">
+    <View
+        android:id="@+id/ds_ic"
+        android:layout_width="25dp"
+        android:background="@drawable/info"
+        android:layout_gravity="end"
+        android:backgroundTint="@color/white"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_height="24sp"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_service"
+        android:layout_width="match_parent"
+        android:layout_marginTop="24dp"
+        android:layout_height="120dp"
+        android:background="@color/primary"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/tv_serviceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Electrical"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

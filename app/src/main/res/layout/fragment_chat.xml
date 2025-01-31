@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".fragments.ChatFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10sdp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            style="@style/CircularView"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="start"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/fy_ic" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/primary"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Does the customer have a problem? You need to provide a solution!"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold|italic" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            style="@style/CircularView"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="end"
+            android:layout_marginStart="10dp"
+            android:background="@color/gry_l"
+            android:scaleType="fitXY"
+            android:src="@drawable/app_ic" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_Search"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/edittext_bg"
+        android:drawableStart="@drawable/search_ic"
+        android:gravity="center|start"
+        android:hint="search"
+        android:paddingStart="@dimen/_5sdp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="normal" />
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/chat_contact"
+                android:id="@+id/rc_showContacts"/>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

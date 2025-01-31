@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+        <DatePicker
+            android:id="@+id/date_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/gry_l"
+            android:foregroundGravity="center"
+            android:headerBackground="@color/blue"
+            android:datePickerMode="calendar"
+            android:soundEffectsEnabled="true"
+            android:calendarTextColor="@color/white"
+            android:startYear="1990"
+            android:textColor="@color/white"
+            android:yearListSelectorColor="@color/primary" />
+</LinearLayout>

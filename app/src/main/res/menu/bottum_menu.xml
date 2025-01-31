@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/DashBoardFragment"
+        android:icon="@drawable/dashboard_ic"
+        android:title="Dash Board" />
+
+    <item
+        android:id="@+id/ChatFragment"
+        android:icon="@drawable/chat_ic"
+        android:title="Chat" />
+    <item
+        android:id="@+id/ProfileFragment"
+        android:icon="@drawable/account_ic"
+        android:title="Profile" />
+</menu>
