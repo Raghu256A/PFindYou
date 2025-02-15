@@ -4,11 +4,13 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.net.Uri
 import android.util.Log
+import com.findyou_professionalapp.DataClass.BookingData
 import com.findyou_professionalapp.DataClass.ChatContact
 import com.findyou_professionalapp.DataClass.ProfessionalsData
 import com.findyou_professionalapp.DataClass.ServiceType
 import com.findyou_professionalapp.DataClass.Services
 import com.findyou_professionalapp.common.Constants
+import com.findyou_professionalapp.common.Utils
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
@@ -60,7 +62,7 @@ class Repository {
         }
     }
 
-    fun saveUserData(userId: String?, user: ProfessionalsData, callback: (Boolean, String?) -> Unit) {
+    private fun saveUserData(userId: String?, user: ProfessionalsData, callback: (Boolean, String?) -> Unit) {
         if (userId != null) {
             db.getReference("ProfessionalDetails").child(userId).setValue(user)
                 .addOnCompleteListener { task ->
@@ -262,6 +264,47 @@ class Repository {
         }
         return profList
     }
+    suspend fun getAllBookingOrders(userId:String):ArrayList<BookingData>?{
+        return try {
+            val list:ArrayList<BookingData> = ArrayList()
+
+            val reference =
+                db.getReference("BookingData").orderByChild("profUsID").equalTo(userId)
+                    .get().await()
+            if (reference.exists()) {
+                list.clear()
+                reference.children.forEach { data ->
+                    val bookingData = data.getValue(BookingData::class.java)
+                    val dataId=data.key
+                    if (bookingData != null) {
+                        if (bookingData.bookingStatus.equals("pending") || bookingData.bookingStatus.equals("processing") || bookingData.bookingStatus.equals("accept")){
+                            bookingData.Id=dataId
+                            list.add(bookingData)
+                        }
+
+                    }
+                }
+                list
+            } else {
+                null
+            }
+        }catch (e:Exception){
+            Utils.printLogcat(e,"getBookingDetails")
+            null
+        }
+    }
+   suspend fun updateBookingStatus(bookingId: String, newStatus: String,callback: (Boolean, String?) -> Unit) {
+
+       db.getReference("BookingData").child(bookingId).updateChildren(
+           mapOf(
+               "bookingStatus" to newStatus
+           )
+       )
+           .addOnCompleteListener { task ->
+               callback(task.isSuccessful,task.exception.toString())
+           }.await()
+    }
+
 
 }
 

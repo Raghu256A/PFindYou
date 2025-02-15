@@ -1,15 +1,21 @@
 package com.findyou_professionalapp.common
 
+import android.app.Activity
 import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import android.content.Context.TELEPHONY_SERVICE
 import android.graphics.drawable.Drawable
+import android.location.Location
+import android.location.LocationManager
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.provider.Settings
 import android.telephony.TelephonyManager
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
+import android.util.Log
 import android.widget.ProgressBar
 import androidx.core.content.ContextCompat
 import com.findyou_professionalapp.DataClass.ServiceType
@@ -39,9 +45,7 @@ object Utils {
                 .setPositiveButton("OK") { dialog, _ ->
                     dialog.dismiss() // Close the dialog
                 }
-                .setNegativeButton("Cancel") { dialog, _ ->
-                    dialog.dismiss() // Close the dialog
-                }
+
 
             // Create and show the AlertDialog
             val alertDialog = builder.create()
@@ -368,5 +372,50 @@ object Utils {
     fun getCurrentTime(): String {
         val sdf = SimpleDateFormat("hh:mm a", Locale.getDefault()) // Format for time in AM/PM
         return sdf.format(Date())
+    }
+    fun printLogcat(e:Exception, tag:String){
+        Log.e(tag, " Exception occurred: ${e.message}", e)
+
+    }
+    fun isNetworkAvailable(context: Context): Boolean {
+        var isNetworkAvailable = false
+        try {
+            val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+            val activeNetworkInfo: NetworkInfo? = connectivityManager.activeNetworkInfo
+
+            if (activeNetworkInfo != null && activeNetworkInfo.isAvailable && activeNetworkInfo.isConnected) {
+                isNetworkAvailable = true
+            }
+        } catch (e: Exception) {
+            // Log the exception
+            printLogcat(e, "isNetworkAvailable")
+        }
+        return isNetworkAvailable
+    }
+
+    fun calculateDistance(lat1: Double, lon1: Double, lat2: Double, lon2: Double): String {
+        val results = FloatArray(1)
+        Location.distanceBetween(lat1, lon1, lat2, lon2, results)
+        val distance=results[0]
+        val formattedNumber = String.format("%.2f", distance / 1000)
+
+        return "${formattedNumber} KM"
+    }
+
+     fun checkIfGpsEnabled(context: Context) :Boolean{
+        val locationManager = context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        val isGpsEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
+
+       return isGpsEnabled
+    }
+    fun stringToDouble(value: String?):Double{
+        var default=0.0
+        if (!value.isNullOrEmpty()){
+            default=value.toDouble()
+        }
+        return default
+    }
+    fun sanitizeBookingId(bookingId: String): String {
+        return bookingId.replace("[#\\$\\.\\[\\]:]".toRegex(), "_")  // Replaces invalid characters with "_"
     }
 }

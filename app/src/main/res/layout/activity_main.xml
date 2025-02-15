@@ -89,6 +89,7 @@
             android:padding="10dp"
             android:background="@color/white"
             android:backgroundTint="@color/white"
+            app:tint="@color/green"
             android:src="@drawable/app_ic"
             />
         <TextView

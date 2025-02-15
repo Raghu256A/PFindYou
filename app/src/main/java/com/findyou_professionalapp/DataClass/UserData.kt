@@ -2,7 +2,9 @@ package com.findyou_professionalapp.DataClass
 
 import android.media.Rating
 import android.net.Uri
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
 data class ProfessionalsData(
     var name: String? = "",
@@ -72,3 +74,38 @@ data class ChatContact(
     var receiveStatus: String? = "",
     var uid:String?=""
     )
+
+@Parcelize
+data class BookingData(
+    var profName: String? = "",
+    var bookingID: String? = "",
+    var profPhone: String? = "",
+    var profEmail: String? = "",
+    var profProfileImageUrl: String? = "",
+    var profUsID: String? = "",
+    var profProfession: String? = "",
+    var proLocation: String? = "",
+    var costumerName: String? = "",
+    var mobileNumber: String? = "",
+    var bookingDate: String? = "",
+    var bookingTime:String?="",
+    var bookingServiceType:String?="",
+    var country:String?="",
+    var state:String?="",
+    var landMark:String?="",
+    var pinCode:String?="",
+    var villageArea:String?="",
+    var fullAddress:String?="",
+    var lat:String?="",
+    var log:String?="",
+    var otherInfo:String?="",
+    var costumerID: String?="",
+    var paymentMode: String?="",
+    var minimumAmount: String?="",
+    var payedAmount: String?="",
+    var bookingStatus: String?="",
+    var paymentID: String? = "",
+    var bookedDateTime: String? = "",
+    var district: String? = "",
+    var Id: String? = ""
+): Parcelable

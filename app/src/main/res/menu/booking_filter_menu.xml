@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/All"
+        android:icon="@drawable/more_vertical"
+        android:title="All" />
+    <item
+        android:id="@+id/nearMe"
+        android:icon="@drawable/map_pin"
+        android:title="Near me" />
+
+
+
+    <item
+        android:id="@+id/available"
+        android:icon="@drawable/ticks"
+        android:title="Accept" />
+</menu>

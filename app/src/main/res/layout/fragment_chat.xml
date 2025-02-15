@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="15dp"
     tools:context=".fragments.ChatFragment">
@@ -42,6 +43,7 @@
             android:layout_marginStart="10dp"
             android:background="@color/gry_l"
             android:scaleType="fitXY"
+            app:tint="@color/green"
             android:src="@drawable/app_ic" />
     </LinearLayout>
 

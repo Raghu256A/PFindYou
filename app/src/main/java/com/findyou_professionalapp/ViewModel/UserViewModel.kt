@@ -6,10 +6,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.findyou_professionalapp.DataClass.BookingData
 import com.findyou_professionalapp.DataClass.ChatContact
 import com.findyou_professionalapp.DataClass.ProfessionalsData
 import com.findyou_professionalapp.DataClass.Services
 import com.findyou_professionalapp.repository.Repository
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.launch
 
 class UserViewModel(private val repository: Repository) : ViewModel() {
@@ -22,6 +25,10 @@ class UserViewModel(private val repository: Repository) : ViewModel() {
 
     private val _chatContStatus = MutableLiveData<ArrayList<ChatContact>?>()
     val chatContStatus: LiveData<ArrayList<ChatContact>?> = _chatContStatus
+    private val _bookingOrders = MutableLiveData<ArrayList<BookingData>?>()
+    val bookingOrders: LiveData<ArrayList<BookingData>?> = _bookingOrders
+    private val _bookingStatus = MutableLiveData<Pair<Boolean, String?>>()
+    val bookingStatus: LiveData<Pair<Boolean, String?>> = _bookingStatus
 
     fun registerUser(user: ProfessionalsData,profile:Uri?) {
         viewModelScope.launch {
@@ -75,6 +82,23 @@ class UserViewModel(private val repository: Repository) : ViewModel() {
                 _chatContStatus.value = repository.getChatIds(uId)
             }catch (e:Exception){
                 e.printStackTrace()
+            }
+        }
+
+    }
+    fun getAllBookingOrders() {
+        val userId:String=FirebaseAuth.getInstance().currentUser!!.uid
+
+        viewModelScope.launch {
+            _bookingOrders.value= repository.getAllBookingOrders(userId)
+        }
+
+    }
+    fun updateBookingStatus(bookingId:String,status:String) {
+
+        viewModelScope.launch {
+            repository.updateBookingStatus(bookingId,status) { success, message ->
+                _bookingStatus.postValue(Pair(success, message) as Pair<Boolean, String?>?)
             }
         }
 

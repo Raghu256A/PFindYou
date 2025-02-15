@@ -16,6 +16,9 @@ import com.findyou_professionalapp.common.Constants
 import com.findyou_professionalapp.common.Utils
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import android.util.Log
+import com.google.firebase.messaging.FirebaseMessaging
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var view1: View
@@ -45,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         Rl_main2.isVisible = false
         ll_main3.isVisible = false
         view5.isVisible = false
+        //getFCMToken()
         val anim: Animation = AnimationUtils.loadAnimation(this, R.anim.rotate_animation)
 
         val slide_up: Animation = AnimationUtils.loadAnimation(this, R.anim.move_left)
@@ -111,4 +115,17 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+
+    fun getFCMToken() {
+        FirebaseMessaging.getInstance().token
+            .addOnCompleteListener { task ->
+                if (!task.isSuccessful) {
+                    Log.w("FCM", "Fetching FCM token failed", task.exception)
+                    return@addOnCompleteListener
+                }
+                val token = task.result
+                Log.d("FCM", "FCM Token: $token")
+            }
+    }
+
 }
